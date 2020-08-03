@@ -1,0 +1,4 @@
+Double url encoding of 'a' -> %2561
+stockApi=http%3a//127.1/%2561dmin/delete?username=carlos
+
+stockApi=http%3a//lOcAlHost/%2561dmin/delete?username=carlos
