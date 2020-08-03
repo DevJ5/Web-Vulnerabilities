@@ -1,0 +1,2 @@
+X-Original-URL: /admin/delete -> use queryparameter in original url -> GET /?username=carlos
+X-Rewrite-URL
